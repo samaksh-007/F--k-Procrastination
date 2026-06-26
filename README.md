@@ -47,9 +47,7 @@ LeetCode happened to pick as today's official challenge.
 
 ## How to install it (Chrome or Edge)
 
-1. Unzip the downloaded folder somewhere permanent — don't delete it after
-   installing, since the browser loads the extension directly from these
-   files.
+1. downlaod or clone this repo in an folder
 2. Open `chrome://extensions` in Chrome, or `edge://extensions` in Edge.
 3. Turn on **Developer mode** (toggle in the top-right corner).
 4. Click **Load unpacked**, and select the unzipped
