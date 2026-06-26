@@ -1,4 +1,6 @@
 # F**k Procrastination
+<img width="440" height="845" alt="image" src="https://github.com/user-attachments/assets/48eb27d3-b48c-4c77-86ff-cfc092e44b20" />
+
 
 A browser extension that locks you out of the rest of the internet until
 you've solved at least one LeetCode problem for the day.
