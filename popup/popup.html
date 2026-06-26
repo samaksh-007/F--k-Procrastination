@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>F**k Procrastination</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup">
+      <!-- ============================ HEADER ============================ -->
+      <header class="popup__header">
+        <div class="brand">
+          <span class="brand__mark">&lt;/&gt;</span>
+          <span class="brand__name">F**k Procrastination</span>
+        </div>
+      </header>
+
+      <!-- ======================= LOCK STATUS CARD ======================== -->
+      <!-- This card is the "signature" visual: a padlock that swaps between
+           a locked/closed state (coral glow) and an open/checked state
+           (teal glow) depending on whether today's problem is solved. -->
+      <section class="status-card" id="statusCard">
+        <div class="lock-icon" id="lockIcon" aria-hidden="true"></div>
+        <div class="status-text">
+          <span class="status-label" id="statusLabel">LOCKED</span>
+          <p class="status-sub" id="statusSub">
+            Solve one LeetCode problem to unlock the rest of the web.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============================= TABS ============================== -->
+      <nav class="tabs" role="tablist" aria-label="Settings sections">
+        <button class="tab tab--active" data-tab="status" role="tab" aria-selected="true">
+          Status
+        </button>
+        <button class="tab" data-tab="lists" role="tab" aria-selected="false">
+          Whitelist / Blacklist
+        </button>
+      </nav>
+
+      <!-- ===================== STATUS / TOGGLE PANEL ====================== -->
+      <section class="tab-panel" data-panel="status">
+        <div class="toggle-row">
+          <div class="toggle-row__copy">
+            <span class="toggle-row__label">Pause discipline mode</span>
+            <p class="toggle-row__hint">Temporarily allow everything, no questions asked.</p>
+          </div>
+          <label class="switch" for="disableToggle">
+            <input type="checkbox" id="disableToggle" />
+            <span class="switch__track"><span class="switch__thumb"></span></span>
+          </label>
+        </div>
+
+        <p class="reset-note">
+          <span class="reset-note__dot"></span>
+          Resets automatically at midnight, your local time.
+        </p>
+      </section>
+
+      <!-- ===================== WHITELIST / BLACKLIST PANEL ================ -->
+      <section class="tab-panel" data-panel="lists" hidden>
+        <label class="field-label" for="whitelistInput">
+          Whitelist <span class="field-hint">always allowed</span>
+        </label>
+        <textarea
+          id="whitelistInput"
+          rows="4"
+          placeholder="leetcode.com&#10;mail.google.com&#10;docs.google.com"
+        ></textarea>
+
+        <label class="field-label" for="blacklistInput">
+          Blacklist <span class="field-hint">blocked until solved</span>
+        </label>
+        <textarea
+          id="blacklistInput"
+          rows="4"
+          placeholder="youtube.com&#10;twitter.com&#10;reddit.com"
+        ></textarea>
+
+        <p class="field-note">One site per line. Subdomains are matched automatically.</p>
+
+        <button class="save-btn" id="saveBtn" type="button">Save changes</button>
+        <p class="save-confirm" id="saveConfirm" hidden>✓ Saved</p>
+      </section>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
